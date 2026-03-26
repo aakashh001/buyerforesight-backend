@@ -9,7 +9,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
-
+@app.get("/")
+def root():
+    return {"message": "BuyerForesight API is running"}
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 # GET /users
 @app.get("/users", response_model=List[User])
 def get_users(
