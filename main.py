@@ -6,7 +6,10 @@ from database import read_users, write_users
 app = FastAPI(
     title="User Management API",
     description="BuyerForeSight Backend Assignment",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
 )
 
 @app.get("/")
